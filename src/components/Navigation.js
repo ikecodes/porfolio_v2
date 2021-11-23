@@ -7,10 +7,10 @@ const Navigation = () => {
     setactiveMenu(current);
   };
   const navItem = [
-    { to: '/#about', menu: 'about' },
-    { to: '/#experience', menu: 'experience' },
-    { to: '/#work', menu: 'work' },
-    { to: '/#contact', menu: 'contact' },
+    { to: '/#about', menu: 'about me.' },
+    { to: '/#experience', menu: 'experience.' },
+    { to: '/#work', menu: 'work.' },
+    { to: '/#contact', menu: 'contact.' },
   ];
   return (
     <nav className='navigation'>
@@ -18,7 +18,7 @@ const Navigation = () => {
       <ul className={`navigation_list ${activeIcon ? '' : 'inactive'}`}>
         {navItem.map(({ to, menu }) => (
           <li key={menu} className='navigation_item'>
-            <span className={to === activeMenu ? 'active' : ''}>•</span>
+            {/* <span className={to === activeMenu ? 'active' : ''}>•</span> */}
             <a href={to} className={`navigation_link ${to === activeMenu ? 'active' : ''}`} onClick={() => handleActive(to)}>
               {menu}
             </a>
