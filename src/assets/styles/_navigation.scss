@@ -1,0 +1,152 @@
+.navigation {
+  top: 5rem;
+  right: 5rem;
+  &_icon {
+    cursor: pointer;
+    position: absolute;
+    height: 4rem;
+    width: 6rem;
+    right: 5rem;
+    top: 5rem;
+    z-index: 1000;
+    display: none;
+    &::before {
+      position: absolute;
+      content: '';
+      height: 0.6rem;
+      width: 6rem;
+      border-radius: 0.5rem;
+      background-color: $color-white;
+      transform-origin: center;
+      transform: rotate(0deg);
+      transition: all 0.2s ease-in;
+    }
+    &::after {
+      position: absolute;
+      top: 1.5rem;
+      content: '';
+      height: 0.6rem;
+      width: 4rem;
+      border-radius: 0.5rem;
+      background-color: $color-white;
+      transform-origin: center;
+      transform: rotate(0deg);
+      transition: all 0.2s ease-in;
+    }
+    @media only screen and (max-width: 700px) {
+      z-index: 1000;
+      display: inline-block;
+    }
+    &.active {
+      &::before {
+        transform: rotate(45deg);
+      }
+      &::after {
+        width: 6rem;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &_list {
+    margin: 0;
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    margin: 1rem 0;
+    transition: all 0.3s ease-in;
+    @media only screen and (max-width: 700px) {
+      margin: 0;
+      z-index: 900;
+      flex-direction: column;
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      background: $color-primary-light;
+      align-items: center;
+      justify-content: center;
+    }
+    &.inactive {
+      @media only screen and (max-width: 700px) {
+        display: none;
+      }
+    }
+  }
+  &_item span {
+    font-size: 2rem;
+    margin: 0 1rem;
+    color: $color-green;
+    @media only screen and (max-width: 700px) {
+      font-size: 5rem;
+    }
+    &.active {
+      color: $color-green;
+    }
+  }
+  &_item:not(:last-child) {
+    margin-right: 2rem;
+    @media only screen and (max-width: 700px) {
+      margin: 3rem 1rem;
+    }
+  }
+
+  &_link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      color: $color-white;
+      text-transform: capitalize;
+      font-weight: 400;
+      text-decoration: none;
+      border-bottom: 1px solid $background;
+      transition: all 0.3s ease-in;
+      @media only screen and (max-width: 700px) {
+        font-size: 5rem;
+      }
+    }
+
+    &:hover {
+      color: $color-green;
+    }
+    &.active {
+      color: $color-green;
+    }
+  }
+}
+
+.contact {
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
+  z-index: 20000;
+  position: fixed;
+  bottom: 0;
+  right: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+
+  & a {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+  &_icon {
+    font-size: 2rem;
+    color: $color-grey;
+    transition: all 0.3s ease-in;
+    &:hover {
+      color: $color-green;
+    }
+  }
+  &::after {
+    background-color: $color-white;
+    margin: 2rem;
+    content: '';
+    display: block;
+    width: 1px;
+    height: 200px;
+    // margin: 0px auto;
+    // background-color: var(--light-slate);
+  }
+}

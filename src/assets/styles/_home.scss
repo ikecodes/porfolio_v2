@@ -1,0 +1,56 @@
+.header {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  &_text-box {
+    @media only screen and (max-width: 550px) {
+      text-align: center;
+    }
+    @media only screen and (max-width: 480px) {
+      width: 40rem;
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '❛❛';
+      font-size: 40rem;
+      color: $color-grey;
+      opacity: 0.1;
+    }
+  }
+
+  &_hi {
+    display: inline-block;
+    // font-size: 5rem;
+    margin-top: 3rem;
+    color: $color-green;
+  }
+  &_im {
+    color: $color-grey;
+  }
+  &_name {
+    font-size: 10rem;
+    color: $color-white;
+    display: inline-block;
+    animation: moveInRight 3s ease-in;
+    @media only screen and (max-width: 550px) {
+      font-size: 5rem;
+    }
+    @media only screen and (max-width: 500px) {
+      font-size: 4rem;
+    }
+  }
+  &_paragraph {
+    width: 60vw;
+    color: $color-grey;
+    @media only screen and (max-width: 480px) {
+      margin: 3rem 0;
+    }
+  }
+  &_love {
+    color: $color-white;
+  }
+}
