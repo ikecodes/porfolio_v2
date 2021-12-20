@@ -25,17 +25,6 @@ const Experience = [
     ],
   },
   {
-    company: 'Pyragle - Full-stack Developer',
-    date: 'November 2019 – September 2020',
-    works: [
-      'Collaborate with designers and backend devs to implement and improve features.',
-      'Debugging on server-side.',
-      'Working/building REST APIs with express.js, mongoose.',
-      'Implementing server-side logic.',
-      'Staging work done and deployment.',
-    ],
-  },
-  {
     company: 'Lagos University Teaching Hospital (ICT department) - Technical Support (intern)',
     date: 'July 2018 – September 2018',
     works: [
